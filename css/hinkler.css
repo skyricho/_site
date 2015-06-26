@@ -23,7 +23,7 @@
  * Page.................Page-level styles (HTML element).
  *
  * OBJECTS
- * Layout...............inuitcss’ layout tool.
+ * Flag.................THe flag object.
  *
  * COMPONENTS
  * Map
@@ -465,60 +465,107 @@ html {
  * #OBJECTS
  */
 /*------------------------------------*\
-    #LAYOUT
+    #FLAG
 \*------------------------------------*/
 /**
- * The inuitcss layout system uses `box-sizing: border-box;` and
- * `display: inline-block;` to create an extremely powerful, flexible
- * alternative to the traditional grid system. Combine the layout items with
- * the widths found in `trumps.widths`.
+ * The flag object is a design pattern similar to the media object, however it
+ * utilises `display: table[-cell];` to give us control over the vertical
+ * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
  */
 /**
- * Begin a layout group.
+ * 1. Allows us to control vertical alignments
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
  */
-.layout {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-left: -24px; }
-
-/**
- * 1. Cause columns to stack side-by-side.
- * 2. Space columns apart.
- * 3. Align columns to the tops of each other.
- * 4. Full-width unless told to behave otherwise.
- * 5. Required to combine fluid widths and fixed gutters.
- */
-.layout__item {
-  display: inline-block;
+.flag {
+  display: table;
   /* [1] */
-  padding-left: 24px;
-  /* [2] */
-  vertical-align: top;
-  /* [3] */
   width: 100%;
-  /* [4] */ }
+  /* [2] */ }
 
 /**
- * Layouts with large gutters.
+ * Items within a flag object. There should only ever be one of each.
+ *
+ * 1. Default to aligning content to their middles.
  */
-.layout--large {
-  margin-left: -48px; }
-  .layout--large > .layout__item {
-    padding-left: 48px; }
+.flag__img,
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+  /* [1] */ }
 
 /**
- * Align layout items to the vertical centers of each other.
+ * Flag images have a space between them and the body of the object.
  */
-.layout--middle > .layout__item {
-  vertical-align: middle; }
+.flag__img {
+  padding-right: 24px; }
+  .flag__img > img {
+    display: block;
+    max-width: none; }
 
 /**
- * Align layout items to the vertical bottoms of each other.
+ * The container for the main content of the flag object.
+ *
+ * 1. Forces the `.flag__body` to take up all remaining space.
  */
-.layout--bottom > .layout__item {
-  vertical-align: bottom; }
+.flag__body {
+  width: 100%;
+  /* [1] */ }
+  .flag__body,
+  .flag__body > :last-child {
+    margin-bottom: 0; }
 
+/**
+ * Reversed flag objects have their image-content to the right, and text-content
+ * to the left.
+ *
+ * 1. Swap the rendered direction of the object…
+ * 2. …and reset it.
+ * 3. Reassign margins to the correct sides.
+ */
+.flag--rev {
+  direction: rtl;
+  /* [1] */ }
+  .flag--rev > .flag__img,
+  .flag--rev > .flag__body {
+    direction: ltr;
+    /* [2] */ }
+  .flag--rev > .flag__img {
+    padding-right: 0;
+    /* [3] */
+    padding-left: 24px;
+    /* [3] */ }
+
+/**
+ * Responsive flag objects.
+ *
+ * There is a very pragmatic, simple implementation of a responsive flag
+ * object, which simply places the text-content beneath the image-content.
+ *
+ * We use a `max-width` media query because:
+ *
+ * a) it is the least verbose method in terms of amount of code required.
+ * b) the flag object’s default state is image-next-to-text, so its stacked
+ *    state is the exception, rather than the rule.
+ */
+@media screen and (max-width: 720px) {
+  .flag--responsive {
+    /**
+     * Disable reversal of content because there is no concept of
+     * ‘reversed’ in a stacked layout.
+     */
+    direction: ltr;
+    /**
+     * Rework the spacings on regular flag objects.
+     */ }
+    .flag--responsive,
+    .flag--responsive > .flag__img,
+    .flag--responsive > .flag__body {
+      display: block; }
+    .flag--responsive > .flag__img {
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: 24px; } }
 /**
  * #COMPONENTS
  */
