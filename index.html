@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <title>Mobify's Pikabu - a simple off-canvas flyout framework</title>
+        
+        <!-- include pikabu.css -->
+        <link rel="stylesheet" href="css/pikabu.css">
+        <link rel="stylesheet" href="css/queenscliff.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script type="text/javascript">
+            // Scroll the page past URL bar if user did not scroll manually, and
+            // hash is either absent or is a mobify properties override.
+            window.onload=function(){
+                setTimeout(function() {
+                    if (!window.pageYOffset) {
+                        window.scrollTo(0, 1);
+                        window.scrollTo(0, 0);
+                    }
+                }, 250);
+            };
+        </script>
+        <style>
+        .m-heights-demo .is-active a {
+            color: #000;
+            text-decoration: none
+        }
+        /* Used to add extra height to elements for demo purposes */
+        .m-dummy-height {
+            height: 500px;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- the viewport -->
+        <div class="m-pikabu-viewport">
+            <!-- the left sidebar -->
+            <div class="m-pikabu-sidebar m-pikabu-left">
+                <!-- left sidebar content -->
+                <ul id="thumbs" class="nav">
+    <li data-src="img/maps/01.png" data-locality="Queenscliff" class="index__item">1</li>
+    <li data-src="img/maps/02.jpg" data-locality="Queenscliff" class="index__item">2</li>
+    <li data-src="img/maps/03.jpg" data-locality="Queenscliff" class="index__item">3</li>
+    <li data-src="img/maps/04.jpg" data-locality="Freshwater" class="index__item">4</li>
+    <li data-src="img/maps/05.jpg" data-locality="Freshwater" class="index__item">5</li>
+    <li data-src="img/maps/06.jpg" data-locality="Freshwater" class="index__item">6</li>
+    <li data-src="img/maps/07.jpg" data-locality="Freshwater" class="index__item">7</li>
+    <li data-src="img/maps/08.jpg" data-locality="Freshwater" class="index__item">8</li>
+    <li data-src="img/maps/09.jpg" data-locality="Freshwater" class="index__item">9</li>
+    <!-- 10 - 19 -->
+    <li data-src="img/maps/10.jpg" data-locality="Freshwater" class="index__item">10</li>
+    <li data-src="img/maps/11.jpg" data-locality="Freshwater" class="index__item">11</li>
+    <li data-src="img/maps/12.jpg" data-locality="Freshwater" class="index__item">12</li>
+    <li data-src="img/maps/13.jpg" data-locality="Freshwater" class="index__item">13</li>
+    <li data-src="img/maps/14.jpg" data-locality="Manly" class="index__item">14</li>
+    <li data-src="img/maps/15.jpg" data-locality="Manly" class="index__item">15</li>
+    <li data-src="img/maps/16.jpg" data-locality="Manly" class="index__item">16</li>
+    <li data-src="img/maps/17.jpg" data-locality="Manly" class="index__item">17</li>
+    <li data-src="img/maps/18.jpg" data-locality="Manly" class="index__item">18</li>
+    <li data-src="img/maps/19.jpg" data-locality="Manly Vale" class="index__item">19</li>
+    <!-- 20 - 29 -->
+    <li data-src="img/maps/20.jpg" data-locality="Manly Vale" class="index__item">20</li>
+    <li data-src="img/maps/21.jpg" data-locality="Manly Vale" class="index__item">21</li>
+    <li data-src="img/maps/22.jpg" data-locality="Manly Vale" class="index__item">22</li>
+    <li data-src="img/maps/23.jpg" data-locality="Manly Vale" class="index__item">23</li>
+    <li data-src="img/maps/24.jpg" data-locality="Manly Vale" class="index__item">24</li>
+    <li data-src="img/maps/25.png" data-locality="Manly Vale" class="index__item">25</li>
+    <li data-src="img/maps/26.png" data-locality="Manly Vale" class="index__item">26</li>
+    <li data-src="img/maps/27.jpg" data-locality="North Balgowlah" class="index__item">27</li>
+    <li data-src="img/maps/28.jpg" data-locality="North Balgowlah" class="index__item">28</li>
+    <li data-src="img/maps/29.jpg" data-locality="North Balgowlah" class="index__item">29</li>
+    <!-- 30 - 39 -->
+    <li data-src="img/maps/30.jpg" data-locality="North Balgowlah" class="index__item">30</li>
+    <li data-src="img/maps/31.jpg" data-locality="North Balgowlah" class="index__item">31</li>
+    <li data-src="img/maps/32.jpg" data-locality="North Balgowlah" class="index__item">32</li>
+    <li data-src="img/maps/33.jpg" data-locality="North Balgowlah" class="index__item">33</li>
+    <li data-src="img/maps/34.jpg" data-locality="North Balgowlah" class="index__item">34</li>
+    <li data-src="img/maps/35.jpg" data-locality="Seaforth" class="index__item">35</li>
+    <li data-src="img/maps/36.jpg" data-locality="Seaforth" class="index__item">36</li>
+    <li data-src="img/maps/37.jpg" data-locality="Seaforth" class="index__item">37</li>
+    <li data-src="img/maps/38.jpg" data-locality="Seaforth" class="index__item">38</li>
+    <li data-src="img/maps/39.jpg" data-locality="Seaforth" class="index__item">39</li>
+    <!-- 40 - 49 -->
+    <li data-src="img/maps/40.jpg" data-locality="Seaforth" class="index__item">40</li>
+    <li data-src="img/maps/41.jpg" data-locality="Seaforth" class="index__item">41</li>
+    <li data-src="img/maps/42.jpg" data-locality="Seaforth" class="index__item">42</li>
+    <li data-src="img/maps/43.jpg" data-locality="Seaforth" class="index__item">43</li>
+    <li data-src="img/maps/44.jpg" data-locality="Seaforth" class="index__item">44</li>
+    <li data-src="img/maps/45.jpg" data-locality="Seaforth" class="index__item">45</li>
+    <li data-src="img/maps/46.jpg" data-locality="Seaforth" class="index__item">46</li>
+    <li data-src="img/maps/47.jpg" data-locality="Seaforth" class="index__item">47</li>
+    <li data-src="img/maps/48.jpg" data-locality="Seaforth" class="index__item">48</li>
+    <li data-src="img/maps/49.jpg" data-locality="Seaforth" class="index__item">49</li>
+<!-- 50 - 51 -->
+    <li data-src="img/maps/50.jpg" data-locality="Manly Vale" class="index__item">B50</li>
+    <li data-src="img/maps/51.jpg" data-locality="Manly Vale" class="index__item">B51</li>
+  </ul>
+
+            </div>
+            <!-- the main page content -->
+            <div class="m-pikabu-container">
+
+                <section>
+                    <!-- Body content goes in here -->
+                    <img src="img/maps/01.png" style="height: auto; width: 900px" id="main">
+                </section>
+                <header>
+                    <a style="position: absolute;top: 0;margin: 5px 0 0 5px;background-color: #fff;" class="m-pikabu-nav-toggle" data-role="left">
+                        <svg id="grid" xmlns="http://www.w3.org/2000/svg" fill="#000" height="2em" version="1.1" data-icon="grid-four-up" data-container-transform="scale(1 1 ) translate(0 )" viewBox="0 0 32 40" x="0px" y="0px"><path d="M.5 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm-27 9c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm-27 9c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm-27 9c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4z"/></svg>
+                    </a>
+                    <p>Queenscliff Map 01</p>
+                </header>
+            </div>
+        </div>
+
+        <!-- include zepto.js or jquery.js -->
+        <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script> -->
+        <script src="libs/jquery/jquery.js"></script>
+        <!-- include pikabu.js -->
+        <script type="text/javascript" src="js/pikabu.js"></script>
+        <script>
+            $(function() {
+                pikabu = new Pikabu();
+
+                // Script to adjust element heights for demo
+                $('.m-heights-demo').on('click', 'a', function(e) {
+                    var $link = $(this), target = $link.data('target');
+                    
+                    e.preventDefault();
+
+                    $('.is-active').removeClass('is-active');
+                    $link.parents('li').addClass('is-active');
+
+                    $('.m-dummy-height').remove();
+
+                    target && $(target).append($('<div class="m-dummy-height">'));
+
+                    pikabu.closeSidebars();
+                    setTimeout(function() {
+                        pikabu.openSidebar('left');
+                    }, 1000);
+                });
+
+                /*
+                Sample usage:
+    
+                // All options are optional
+                pikabu = new Pikabu({
+                    // If you'd like to request different elements be used
+                    // as controls. 
+                    // IMPORTANT: If you change the class names here, please
+                    // remember to change the appropriate classes in the 
+                    // stylesheets as well.
+                    selectors: {
+                        element: '.main-element-container',
+                        left: '.left-sidebar',
+                        right: '.right-sidebar',
+                        navToggles: '.sidebar-opener',
+                        overlay: '.overlay'
+                    },
+                    // Specify left and right sidebar widths independently
+                    widths: {
+                        left: '70%',
+                        right: '70%'
+                    },
+                    // Functions to trigger on initializing, opening and closing the sidebar
+                    onInit: function() { ... },
+                    onOpened: function() { ... },
+                    onClosed: function() { ... }
+                });
+
+                // Once you've created the pikabu instance like shown above, 
+                // you can use it elsewhere as shown below:
+
+                pikabu.openSidebar('right');
+                pikabu.closeSidebars();
+
+                pikabu.activeSidebar // 'left' or 'right'
+                pikabu.$sidebars[pikabu.activeSidebar] // get the Zepto/jQuery active sidebar object
+
+                // Pikabu also provides some utility functions, like:
+                pikabu.scrollTo(500); // Smooth scroll to 500px in the document
+
+                // pikabu.device contains some capability information about the device, like:
+                pikabu.isAndroid; // returns true/false
+                */
+            });
+        </script>
+    </body>
+</html>
