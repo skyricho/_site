@@ -179,8 +179,8 @@ Mobify.$ = Mobify.$ || window.Zepto || window.jQuery;
                 },
 
                 widths: {
-                    left: '20em',
-                    right: '20em'
+                    left: '250px',
+                    right: '250px'
                 },
 
                 // Transition speeds for open/close animation
