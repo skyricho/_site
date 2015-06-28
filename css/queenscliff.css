@@ -15,6 +15,16 @@
   background: #111;
 }
 
+.index__item {
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  margin: 0px 0px 1px -2px;
+  padding-top: 18px;
+  background-color: #9D9D9D;
+  color: #fff;
+  text-align: center; }
+
 /* Navigation Menu - List items */
 .nav-item {
   /* non-critical appearance styles */
