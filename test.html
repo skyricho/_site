@@ -18,15 +18,28 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<script type="text/javascript">
+      $(function () {
+        $('#thumbs li').on('click', function () {
+          $('#map').attr('src', $(this).data('src'));
+          $('#link').attr('locality', $(this).data('locality'));
+            var imgTitle = $(this).data('locality') + " " + $(this).text();
+          $('#imgTitle').text(imgTitle);
+          $('#content').slideToggle(500);
+        });
+      });
+    </script>
+
   </head>
   <body>
-<div id="map-canvas"><img src="img/maps/01.png"></div>
+<div id="map-canvas"><img id="map" src="img/maps/01.png"></div>
 <div id="hamburger" style="position: fixed; top: 5px; left: 5px; width: 40px; height: 40px; padding: 10px;background-color: #fff;"> 
     <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='20px' height='20px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>
 </div>
 <div class="maps" style="background-color:rgba(0, 0, 0, 0.6); position: absolute; top: 0; width: 100%;">
-    <div style="background-color: red;width: 75%;z-index: 200;">
-    <ul id="foo-thumbs" class="foo-navigation">
+    <div style="background-color: #fff;width: 75%;z-index: 200;">
+    <ul id="thumbs" class="foo-navigation">
     <li data-src="img/maps/01.png" data-locality="Queenscliff" class="index__item">1</li>
     <li data-src="img/maps/02.jpg" data-locality="Queenscliff" class="index__item">2</li>
     <li data-src="img/maps/03.jpg" data-locality="Queenscliff" class="index__item">3</li>
