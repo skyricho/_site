@@ -21,11 +21,11 @@ $(document).ready(function(){
   </head>
   <body>
 <div id="map-canvas"><img src="img/maps/01.png"></div>
-<div style="position: fixed; top: 5px; left: 5px;z-index: 100;">
-    <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" fill="#000" height="2em" version="1.1" data-icon="grid-four-up" data-container-transform="scale(1 1 ) translate(0 )" viewBox="0 0 32 40" x="0px" y="0px"><path d="M.5 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm-27 9c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm-27 9c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm-27 9c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4zm9 0c-.3 0-.5.2-.5.5v4c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5v-4c0-.3-.2-.5-.5-.5h-4z"/></svg>MENU
+<div id="hamburger" style="position: fixed; top: 5px; left: 5px; width: 40px; height: 40px; padding: 10px;background-color: #fff;"> 
+    <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='20px' height='20px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>
 </div>
 <div class="maps" style="background-color:rgba(0, 0, 0, 0.6); position: absolute; top: 0; width: 100%;">
-    <button id="hide" style="padding-left: 20px;">Close</button>
+    <div style="background-color: red;width: 75%;z-index: 200;">
     <ul id="foo-thumbs" class="foo-navigation">
     <li data-src="img/maps/01.png" data-locality="Queenscliff" class="index__item">1</li>
     <li data-src="img/maps/02.jpg" data-locality="Queenscliff" class="index__item">2</li>
@@ -84,6 +84,7 @@ $(document).ready(function(){
     <li data-src="img/maps/50.jpg" data-locality="Manly Vale" class="index__item">B50</li>
     <li data-src="img/maps/51.jpg" data-locality="Manly Vale" class="index__item">B51</li>
   </ul>
+</div>
 </div>
   </body>
 </html>
