@@ -1,47 +1,10 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-    </style>
     <link rel="stylesheet" href="css/queenscliff.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $(".maps").hide();
-    $(".maps").click(function(){
-        $(".maps").hide();
-    });
-    $("#hamburger").click(function(){
-        $(".maps").show();
-        $(".maps").css('position', 'absolute');
-        window.scrollTo(0, 0);
-    });
-});
-</script>
-
-<script type="text/javascript">
-      $(function () {
-        $('#thumbs li').on('click', function () {
-          $('#map').attr('src', $(this).data('src'));
-          $('#link').attr('locality', $(this).data('locality'));
-            var imgTitle = $(this).data('locality') + " " + $(this).text();
-          $('#imgTitle').text(imgTitle);
-          $('#content').slideToggle(500);
-        });
-      });
-    </script>
-
   </head>
-  <body>
-<div id="map-canvas"><img id="map" src="img/maps/01.png" height="600px"></div>
-<div id="hamburger" style="position: fixed; top: 5px; left: 5px; width: 40px; height: 40px; padding: 10px;background-color: #fff;"> 
-    <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='20px' height='20px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>
-</div>
-<div class="maps" style="background-color:rgba(0, 0, 0, 0.6); position: fixed; top: 0; width: 100%;overflow: scroll;">
-    <div style="background-color: #fff; width: 270px;">
-    <ul id="thumbs" class="foo-navigation" style="overflow: scroll;">
+<body>
+  <ul id="thumbs" class="navigation">
     <li data-src="img/maps/01.png" data-locality="Queenscliff" class="index__item">1</li>
     <li data-src="img/maps/02.jpg" data-locality="Queenscliff" class="index__item">2</li>
     <li data-src="img/maps/03.jpg" data-locality="Queenscliff" class="index__item">3</li>
@@ -99,7 +62,11 @@ $(document).ready(function(){
     <li data-src="img/maps/50.jpg" data-locality="Manly Vale" class="index__item">B50</li>
     <li data-src="img/maps/51.jpg" data-locality="Manly Vale" class="index__item">B51</li>
   </ul>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+
+<div class="site-wrap">
+  
+  <img src="img/maps/01.png" style="height: auto; width: 900px" id="main">
 </div>
-</div>
-  </body>
-</html>
